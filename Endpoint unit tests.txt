@@ -1,0 +1,32 @@
+Endpoints unit testing
+
+GET - /sim-cards
+Expected result: This endpoint is expected to return a list of all the data (sim card ID and Name)
+		stored inside the sim cards table.
+Actual result: This endpoint functions as expected returning a list of all the data stored inside
+		the table.
+
+
+POST - /orders
+Expected result: This should allow a user to create a new order whereby the user provides a simID, 
+		customerID and delivery address, in return it will provide the user with a orderID, 
+		status and a creation date (createdAt). This information will be stored inside a
+		table called orders.
+Actual result: This endpoint works as expected allowing user(s) to create a order as well as returning
+		the expected feedback after creating an order.
+
+
+PUT - /orders/:id
+Expected result: This endpoint enables a user to change the status of a specific order by providing
+		the orderID of choice.
+Actual result: This endpoint functions as expected allowing user to modify the status of the orderID
+		that is specified.
+
+
+GET - /orders?page=:page&limit=:limit
+Expected result: This endpoint retrieves all the data stored in the orders table, but enables 
+		the ablilty to page through the large amount of data which is retrieved. Also
+		gives the user the choice to decided how many records they would like to display
+		on each page.
+Actual result: This endpoint functions as it should, retrieving all the orders stored in the table
+		as well as the paging system that has been implemented.
